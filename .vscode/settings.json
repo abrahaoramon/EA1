@@ -2,6 +2,7 @@
     "C_Cpp.errorSquiggles": "Disabled",
     "files.associations": {
         "TESTE.C": "cpp",
-        "A.C": "cpp"
+        "A.C": "cpp",
+        "system_error": "c"
     }
 }

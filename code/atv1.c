@@ -3,7 +3,9 @@
 #include<stdlib.h>
 #include<string.h>
 
-#define INPUTS (char) char >= '0' && char <= '9' || char>= 'A' && char <= 'z'
+//Macros:
+#define NUM (char) char>= '0' && char <= '9';
+#define LETRAS (char) char>= 'A' && char <= 'Z';
 
 // Variável do tipo c_rle para compressão de texto
 struct c_rle 
@@ -17,8 +19,8 @@ char Fun[2]; // Tipo da função aplicada pelo usuário
 char Text[1000]; // Texto digitado pelo usuário
 char Str_Encode[1000]; // Saida da codificação
 char Str_Decode[1000]; // Saida da decodificação
-struct c_rle Coded[1000];
-int Psc_Coded, Serie;
+struct c_rle Coded[1000]; // Saida da função de compressão
+int Psc_Coded, Serie; // Variaveis para controle da saida da compressão
 
 //Blocos de função:
 void Encode(void);
@@ -72,7 +74,8 @@ do
        }
        if(fun_decode==0)
        {
-           Decode();           
+           Decode(); 
+                     
        }
        
     
@@ -165,14 +168,13 @@ void Encode(void)
     }
 } 
 
-//Função para decodificação:
+//Função para decodificação:(Não consegui finalizar)
 void Decode(void)
 {
-    printf ( "Decodificador: \n");
-    puts(Text);
+    printf ( "Erro - O decodificador nao foi finalizado :( \n");
 }
 
-// Função para compressão
+// Função para compressão:
 void C_Rle(char in_text[], struct c_rle out_text[])
 {
     int psc_comp, psc_in_text=0, ctrl; // variáveis de controle da função
@@ -201,9 +203,7 @@ void C_Rle(char in_text[], struct c_rle out_text[])
     Serie=psc_comp;
 }
 
-// Função para descompressão
-/*void D_Rle(void)
+// Função para descompressão: (Não consegui finalizar)
+void D_Rle(void)
 {
-    printf ( "Decodificador: \n");
-    puts(Text);
-}*\
+}
